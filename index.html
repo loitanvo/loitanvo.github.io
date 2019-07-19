@@ -21,8 +21,10 @@
     <h1>Base 64 decoder + Query string fixer <br></h1>
 
     <form>  
-        Enter Base 64 or Query String Parameter here: <br> <textarea type="text" id="number" name="number">  </textarea>
+        Enter Base 64 or Query String Parameter here: <br>
+        <textarea rows="20" cols="50" type="text" id="number" name="number">  </textarea> <br>
         <input type="button" class="btn btn-raised btn-primary" value="Do Work" onclick="decode()"/>  
+        <input type="button" class="btn btn-raised btn-secondary" value="Clear" onclick="document.getElementById('number').value = ''">
         </form>  
         
         <script type="text/javascript">  
@@ -31,10 +33,7 @@
         const decode = () => {  
         var number = document.getElementById("number").value;  
         
-        //var decoded = atob(number).split(',"').join('\n');
-
-        //unescape(number).split('&').join('\n');
-        
+        // this is where it is taking the call and inserting it into the function
          if (number.includes("AQB=")){
          console.table(unescape(number).split('&').join('\n'))
 
