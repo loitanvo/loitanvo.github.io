@@ -43,8 +43,8 @@
          document.getElementById('number').value = unescape(number).split('&').join('\n')
 
         } else {
-           document.getElementById('number').value =console.log((JSON.parse(atob(number))));
-          document.getElementById('number').value = console.log(atob(number).split(',"').join('\n'));
+           document.getElementById('number').value =(JSON.parse(atob(number)));
+          document.getElementById('number').value = atob(number).split(',"').join('\n');
         }
 
       
