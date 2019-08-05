@@ -39,7 +39,7 @@
          console.table(unescape(number).split('&').join('\n'))
 
         } else {
-          console.table(atob(number).split(',"').join('\n'))
+          console.log(JSON.parse(atob(number)))
         }
 
       

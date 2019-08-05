@@ -20,15 +20,19 @@
   <body>
     <h1>Base 64 decoder + Query string fixer <br></h1>
     <div id="root"></div>
+    
 
     <form>  
         Enter Base 64 or Query String Parameter here: <br>
-        <textarea rows="20" cols="50" type="text" id="number" name="number">  </textarea> <br>
+        <textarea rows="30" cols="60" type="text" id="number" name="number">  </textarea> <br>
         <input type="button" class="btn btn-raised btn-primary" value="Do Work" onclick="decode()"/>  
         <input type="button" class="btn btn-raised btn-secondary" value="Clear" onclick="document.getElementById('number').value = ''">
         </form>  
         
+        <script src="dist/json-formatter.js"></script>
+
         <script type="text/javascript">  
+        
 
       
         const decode = () => {  
@@ -36,10 +40,11 @@
         
         // this is where it is taking the call and inserting it into the function
          if (number.includes("AQB=")){
-         console.table(unescape(number).split('&').join('\n'))
+         document.getElementById('number').value = unescape(number).split('&').join('\n')
 
         } else {
-          console.table(atob(number).split(',"').join('\n'))
+           document.getElementById('number').value =(JSON.parse(atob(number)));
+          document.getElementById('number').value = atob(number).split(',"').join('\n');
         }
 
       
