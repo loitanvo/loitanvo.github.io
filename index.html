@@ -40,7 +40,8 @@
         
         // this is where it is taking the call and inserting it into the function
          if (number.includes("AQB=")){
-          document.getElementById('number').value = unescape(number).split('&').join('\n')
+          document.getElementById('number').value = decodeURIComponent(number).split('&').join('\n')
+          console.log(decodeURIComponent(number).split('&').join('\n'));
 
         } else {
            document.getElementById('number').value =(JSON.stringify(atob(number), undefined ,2));
