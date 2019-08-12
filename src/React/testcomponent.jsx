@@ -11,6 +11,6 @@ export class TestClass extends React.Component {
     }
 
     render() {
-        return <div>Hi {this.props.name} from TestClass!</div>
+        return <div></div>
     }
 }

@@ -6,7 +6,7 @@ import { Testcomponent, TestClass } from './testcomponent';
 // Create a react component
 const App = () => {
     console.log('hello world');
-    return <TestClass name="Loi" />;
+   // return <TestClass name="Loi" />;
 };
 
 // Take the react component and show it on the screen
