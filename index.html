@@ -19,6 +19,7 @@
   </head>
   <body>
     <h1>Base 64 decoder + Query string fixer <br></h1>
+    <h1>Open the browser console for more info <br></h1>
     <div id="root"></div>
     
 
@@ -45,8 +46,8 @@
 
         } else {
            document.getElementById('number').value =(JSON.stringify(atob(number), undefined ,2));
-           console.log((JSON.parse(atob(number))));
            document.getElementById('number').value = atob(number).split(',"').join('\n');
+           console.log((JSON.parse(atob(number))));
         }
 
       
